@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=40.8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastdomaincheck-mcp-server"
+version = "0.1.10"
+description = "MCP Server for checking domain name availability using WHOIS and DNS via stdio."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "Bingal", email = "bingalsky@gmail.com" },
+]
+keywords = ["mcp", "domain", "whois", "dns", "availability", "check", "stdio"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: Name Service (DNS)",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+
+[project.scripts]
+fastdomaincheck-mcp-server = "fastdomaincheck_mcp_server.server:main"
+
+[project.urls]
+Homepage = "https://fastdomaincheck.com/"
+Repository = "https://github.com/bingal/fastdomaincheck-mcp-server-python"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple"
+default = true
