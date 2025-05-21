@@ -25,7 +25,12 @@ def check_domains(domains: list[str]) -> dict[str, dict[str, dict[str, bool]]]:
     from .checker import check_domains_availability
     # Adapt the output to match the documented format
     raw_result = check_domains_availability(domains)
-    return {"results": {k: {"registered": v} for k, v in raw_result.items()}}
+    return {
+        "results": {
+            k: {"registered": v == "registered"}
+            for k, v in raw_result.items()
+        }
+    }
 
 def main():
     mcp.run()
