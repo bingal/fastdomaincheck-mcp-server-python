@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/bingal-fastdomaincheck-mcp-server-python-badge.png)](https://mseep.ai/app/bingal-fastdomaincheck-mcp-server-python)
+
 # FastDomainCheck MCP Server (Python)
 
 This is a domain availability check server implemented using Python and the Model Context Protocol (MCP).
